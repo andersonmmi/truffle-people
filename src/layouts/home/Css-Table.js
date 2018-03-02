@@ -4,19 +4,37 @@ import _ from 'lodash';
 
 let web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:9545"))
 
-export default class Table extends Component{
+export default class CssTable extends Component{
 
   render(){
     const TableStyle={
-      backgroundColor: '#00A000',
-      color: "white",
-      margin: "5px auto",
-      border: "5px solid white",
+
     }
     const CellStyle={
-      width: "200px",
-      textAlign: "center"
+      color: 'black',
+      animationName: 'toCollapsed',
+      animationDuration: '1s',
+      msTransform: 'rotate(0deg)', /* IE 9 */
+      webkitTransform: 'rotate(0deg)', /* Chrome, Safari, Opera */
+      transform: 'rotate(0deg)',
+      width: '350px',
+      textAlign: 'center',
+      border: '1px solid yellow',
+      backgroundColor: 'white',
+      borderStyle: 'solid',
+      borderWidth: '5px',
+      borderRadius: '5px',
+      borderStyle: 'ridge',
+      borderColor: 'white',
+      borderWidth: '8px',
+      fontFamily: 'Muli Helvetica Neue Helvetica Arial sans-serif',
+      textAlign: 'justify'
+
     }
+    const FontStyle= {
+
+    }
+
 
     let TableRows = []
 
@@ -31,7 +49,7 @@ export default class Table extends Component{
     })
 
     return(
-      <div className="App-table-div">
+      <div className="ag-theme-dark">
             <table className="App-table">
               <thead style={TableStyle}>
                 <tr>
